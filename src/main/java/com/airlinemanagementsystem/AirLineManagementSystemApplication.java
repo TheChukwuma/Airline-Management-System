@@ -1,4 +1,4 @@
-package com.example.airlinemanagementsystem;
+package com.airlinemanagementsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
