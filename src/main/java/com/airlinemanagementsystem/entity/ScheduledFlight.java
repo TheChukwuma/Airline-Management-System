@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @ToString

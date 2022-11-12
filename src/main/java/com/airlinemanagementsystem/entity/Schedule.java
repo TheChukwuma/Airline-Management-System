@@ -12,7 +12,6 @@ import java.util.Objects;
 @Setter
 @RequiredArgsConstructor
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "schedule")
 public class Schedule extends BaseClass{
