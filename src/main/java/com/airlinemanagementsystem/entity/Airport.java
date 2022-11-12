@@ -11,7 +11,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Entity
+@Entity(name = "airports")
 public class Airport extends BaseClass{
     private String airportCode;
     private String airportLocation;

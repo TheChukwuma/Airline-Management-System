@@ -12,7 +12,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Entity
+@Entity(name = "scheduled_flights")
 public class ScheduledFlight extends BaseClass{
 
     @OneToOne(fetch = FetchType.EAGER)

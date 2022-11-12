@@ -13,7 +13,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "schedule")
+@Table(name = "schedules")
 public class Schedule extends BaseClass{
 
 	@OneToOne(fetch = FetchType.EAGER)

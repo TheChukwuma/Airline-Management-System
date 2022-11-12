@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Entity
+@Entity(name = "passengers")
 public class Passenger extends BaseClass{
 
     @Column(nullable = false,columnDefinition = "VARCHAR(100)")

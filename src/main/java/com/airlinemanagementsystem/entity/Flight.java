@@ -11,7 +11,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name = "flights")
 public class Flight extends BaseClass{
     private Long flightNo;
     private String carrierName;
