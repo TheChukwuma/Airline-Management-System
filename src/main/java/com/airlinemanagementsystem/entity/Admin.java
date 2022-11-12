@@ -17,7 +17,6 @@ import java.util.Objects;
 @Entity
 public class Admin extends User{
 
-    private String title;
     private String adminCode;
 
     @Override
