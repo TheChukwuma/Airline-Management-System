@@ -40,6 +40,7 @@ public class Passenger extends BaseClass{
     @Column(nullable = false ,columnDefinition = "INTEGER")
     private int luggage;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

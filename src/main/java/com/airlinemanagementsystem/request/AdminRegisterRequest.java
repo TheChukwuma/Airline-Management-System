@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class AdminRegisterRequest extends UserRegisterRequest{
+public class AdminRegisterRequest extends CustomerRegisterRequest {
 
     private String adminCode;
 

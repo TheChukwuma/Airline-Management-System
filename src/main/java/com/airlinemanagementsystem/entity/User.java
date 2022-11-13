@@ -33,5 +33,5 @@ public class User extends BaseClass{
     private Role role;
 
     @Column(columnDefinition = "boolean default false")
-    private boolean isVerified;
+    private boolean isVerified = false;
 }

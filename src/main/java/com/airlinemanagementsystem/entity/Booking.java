@@ -4,10 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import org.hibernate.Hibernate;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -20,11 +18,12 @@ import java.util.Objects;
 public class Booking extends BaseClass{
 
     @JsonBackReference
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="customer_id", referencedColumnName = "id")
     private Customer customer;
 
-    private Integer noOfPassengers;
+    @OneToMany
+    private List<Passenger> passengerList;
 
     @Override
     public boolean equals(Object o) {

@@ -12,7 +12,6 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-@NoArgsConstructor
 @DiscriminatorValue("admin")
 @Entity
 public class Admin extends User{
