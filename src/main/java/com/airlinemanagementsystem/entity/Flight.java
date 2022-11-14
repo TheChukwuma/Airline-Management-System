@@ -14,6 +14,7 @@ import java.util.Objects;
 @Entity(name = "flights")
 public class Flight extends BaseClass{
     private Long flightNo;
+    private String airWays;
     private String carrierName;
     private String flightModel;
     private Integer seatCapacity;
