@@ -1,7 +1,9 @@
 package com.airlinemanagementsystem.controller;
 
+import com.airlinemanagementsystem.exception.UnAuthorisedAdminException;
+import com.airlinemanagementsystem.request.AdminRegisterRequest;
 import com.airlinemanagementsystem.request.CustomerRegisterRequest;
-import com.airlinemanagementsystem.response.CustomerRegisterResponse;
+import com.airlinemanagementsystem.response.UserRegisterResponse;
 import com.airlinemanagementsystem.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,8 +24,14 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/users/register")
-    public ResponseEntity<CustomerRegisterResponse> registerUser(@Valid @RequestBody CustomerRegisterRequest request){
-        CustomerRegisterResponse response = authService.registerUser(request);
+    public ResponseEntity<UserRegisterResponse> registerUser(@Valid @RequestBody CustomerRegisterRequest request){
+        UserRegisterResponse response = authService.registerUser(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @PostMapping("/admin/register")
+    public ResponseEntity<UserRegisterResponse> registerAdmin(@Valid @RequestBody AdminRegisterRequest request) throws UnAuthorisedAdminException {
+        UserRegisterResponse response = authService.registerAdmin(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }

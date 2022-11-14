@@ -1,5 +1,7 @@
 package com.airlinemanagementsystem.entity;
 
+import com.airlinemanagementsystem.enums.Role;
+import com.airlinemanagementsystem.request.AdminRegisterRequest;
 import lombok.*;
 import org.hibernate.Hibernate;
 
@@ -17,6 +19,16 @@ import java.util.Objects;
 public class Admin extends User{
 
     private String adminCode;
+
+    public Admin(AdminRegisterRequest request){
+        this.adminCode = request.getAdminCode();
+        this.setEmail(request.getEmail());
+        this.setFirstName(request.getFirstName());
+        this.setLastName(request.getLastName());
+        this.setPassword(request.getPassword());
+        this.setPhoneNumber(request.getPhoneNumber());
+        this.setRole(Role.ADMIN);
+    }
 
     @Override
     public boolean equals(Object o) {

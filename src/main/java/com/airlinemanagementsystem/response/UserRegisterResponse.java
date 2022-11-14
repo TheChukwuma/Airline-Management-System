@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerRegisterResponse {
+public class UserRegisterResponse {
 
     private HttpStatus status;
 
